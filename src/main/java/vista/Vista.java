@@ -14,7 +14,7 @@ public class Vista {
         int n = leerEntero("Ingrese el número de estudiantes:", 1, Integer.MAX_VALUE);
         Tecnologia tecnologia = new Tecnologia(n);
 
-        // Registro de los N estudiantes
+
         for (int i = 1; i <= n; i++) {
             int codigo = leerEntero("Estudiante " + i + "\nIngrese el código (mayor a 21000):",
                     21001, Integer.MAX_VALUE);
@@ -37,17 +37,17 @@ public class Vista {
         JOptionPane.showMessageDialog(null, "Notas actualizadas.\n\n" + tecnologia.generarReporte());
     }
 
-    // ---------- Métodos auxiliares de lectura con validación ----------
+
 
     private static int leerEntero(String mensaje, int min, int max) {
         while (true) {
             String entrada = JOptionPane.showInputDialog(mensaje);
-            if (entrada == null) System.exit(0); // el usuario presionó Cancelar
+            if (entrada == null) System.exit(0); 
             try {
                 int valor = Integer.parseInt(entrada.trim());
                 if (valor >= min && valor <= max) return valor;
             } catch (NumberFormatException ex) {
-                // se vuelve a pedir
+
             }
             JOptionPane.showMessageDialog(null, "Valor inválido, intente de nuevo.");
         }

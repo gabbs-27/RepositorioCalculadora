@@ -13,7 +13,7 @@ public class Tecnologia {
         cantidadRegistrados = 0;
     }
 
-    /** Guarda un estudiante en la siguiente posición libre. Retorna false si el arreglo está lleno. */
+
     public boolean registrarEstudiante(Estudiante e) {
         if (cantidadRegistrados >= estudiantes.length) {
             return false;
@@ -23,7 +23,7 @@ public class Tecnologia {
         return true;
     }
 
-    /** Reporte inicial: todos los datos, la definitiva y la aprobación de cada estudiante. */
+
     public String generarReporte() {
         String reporte = "REPORTE GENERAL\n\n";
         for (int i = 0; i < cantidadRegistrados; i++) {
@@ -39,7 +39,7 @@ public class Tecnologia {
         return reporte;
     }
 
-    /** Modificación 1: código, nombre y definitiva de quienes superan la notaLimite. */
+
     public String listarSuperioresA(double notaLimite) {
         String lista = "Estudiantes con definitiva superior a " + notaLimite + ":\n\n";
         int encontrados = 0;
@@ -57,7 +57,7 @@ public class Tecnologia {
         return lista;
     }
 
-    /** Modificación 2: incrementa la nota de Desarrollo de todos. No retorna nada (void). */
+
     public void incrementarNotasDesarrollo(double cifra) {
         for (int i = 0; i < cantidadRegistrados; i++) {
             estudiantes[i].incrementarNotaDesarrollo(cifra);

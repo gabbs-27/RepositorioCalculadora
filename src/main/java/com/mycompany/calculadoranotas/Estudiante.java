@@ -30,10 +30,7 @@ public class Estudiante {
         return calcularDefinitiva() < NOTA_APROBACION ? "NO APRUEBA" : "SI APRUEBA";
     }
 
-    /**
-     * Suma la cifra a la nota de Desarrollo sin dejar que pase de 5.0.
-     * Si la cifra completa la haría pasar de 5.0, solo suma lo que falta para llegar a 5.0.
-     */
+
     public void incrementarNotaDesarrollo(double cifra) {
         notaDesarrollo = Math.min(notaDesarrollo + cifra, NOTA_MAXIMA);
     }
