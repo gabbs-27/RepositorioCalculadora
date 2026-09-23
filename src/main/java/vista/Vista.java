@@ -32,7 +32,7 @@ public class Vista {
         JOptionPane.showMessageDialog(null, tecnologia.listarSuperioresA(notaLimite));
 
         // Modificación 2
-        double cifra = leerDouble("Ingrese la cifra de incremento para Desarrollo (0.0 - 0.5):", 0.0, 0.5);
+        double cifra = leerDouble("¿Cuál es el incremento para desarrollo? (0.0 - 0.5):", 0.0, 0.5);
         tecnologia.incrementarNotasDesarrollo(cifra);
         JOptionPane.showMessageDialog(null, "Notas actualizadas.\n\n" + tecnologia.generarReporte());
     }
@@ -63,7 +63,7 @@ public class Vista {
             } catch (NumberFormatException ex) {
                 // se vuelve a pedir
             }
-            JOptionPane.showMessageDialog(null, "Valor inválido, debe estar entre " + min + " y " + max + ".");
+            JOptionPane.showMessageDialog(null, "Error de valor, debe estar entre: " + min + " y " + max + ".");
         }
     }
 
@@ -71,8 +71,6 @@ public class Vista {
         while (true) {
             String entrada = JOptionPane.showInputDialog(mensaje);
             if (entrada == null) System.exit(0);
-            if (!entrada.trim().isEmpty()) return entrada.trim();
-            JOptionPane.showMessageDialog(null, "El nombre no puede estar vacío.");
         }
     }
 }
