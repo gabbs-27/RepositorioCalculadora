@@ -11,7 +11,7 @@ import com.mycompany.calculadoranotas.Tecnologia;
 public class Vista {
 
     public static void main(String[] args) {
-        int n = leerEntero("Ingrese cantidad de estudiantes:", 1, Integer.MAX_VALUE);
+        int n = leerEntero("¿Cuántos estudiantes son?", 1, Integer.MAX_VALUE);
         Tecnologia tecnologia = new Tecnologia(n);
 
 
@@ -28,7 +28,7 @@ public class Vista {
         JOptionPane.showMessageDialog(null, tecnologia.generarReporte());
 
         // Modificación 1
-        double notaLimite = leerDouble("Ingrese la nota límite (0.0 - 4.9):", 0.0, 4.9);
+        double notaLimite = leerDouble("¿Cuál es la nota límite? (0.0 - 4.9):", 0.0, 4.9);
         JOptionPane.showMessageDialog(null, tecnologia.listarSuperioresA(notaLimite));
 
         // Modificación 2
