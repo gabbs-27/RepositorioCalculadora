@@ -11,7 +11,7 @@ import com.mycompany.calculadoranotas.Tecnologia;
 public class Vista {
 
     public static void main(String[] args) {
-        int n = leerEntero("Ingrese el número de estudiantes:", 1, Integer.MAX_VALUE);
+        int n = leerEntero("Ingrese cantidad de estudiantes:", 1, Integer.MAX_VALUE);
         Tecnologia tecnologia = new Tecnologia(n);
 
 
@@ -49,7 +49,7 @@ public class Vista {
             } catch (NumberFormatException ex) {
 
             }
-            JOptionPane.showMessageDialog(null, "Valor inválido, intente de nuevo.");
+            JOptionPane.showMessageDialog(null, "Error, ingrese otro valor:");
         }
     }
 

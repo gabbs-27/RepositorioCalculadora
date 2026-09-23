@@ -52,7 +52,7 @@ public class Tecnologia {
             }
         }
         if (encontrados == 0) {
-            lista += "Ningún estudiante supera esa nota.";
+            lista += "No hay un estudiante que supere esa nota.";
         }
         return lista;
     }
